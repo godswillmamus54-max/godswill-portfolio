@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Mail, MapPin } from "lucide-react";
+import { Mail, MapPin, Globe } from "lucide-react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export default function Contact() {
@@ -22,17 +22,22 @@ export default function Contact() {
           Let's <span className="text-cyan-400">Work Together</span>
         </motion.h2>
 
-        <p className="mx-auto mb-16 max-w-3xl text-lg text-gray-400">
-          I'm open to onsite, hybrid, and remote opportunities worldwide as an
-          AI Automation Engineer, DevOps Engineer, Cloud Engineer, and Workflow
-          Automation Specialist. I enjoy building production-ready AI systems,
-          scalable cloud infrastructure, and intelligent automation solutions
-          that help businesses improve efficiency and accelerate growth.
+        <p className="mx-auto mb-16 max-w-3xl text-lg leading-8 text-gray-400">
+          I'm currently available for onsite, hybrid, and remote opportunities
+          as an <span className="text-cyan-400">AI Automation Engineer</span>,
+          <span className="text-cyan-400"> DevOps Engineer</span>,
+          <span className="text-cyan-400"> Cloud Engineer</span>, or
+          <span className="text-cyan-400"> Workflow Automation Specialist</span>.
+          Whether you're looking to automate business processes, deploy cloud
+          infrastructure, or build AI-powered systems, I'd love to help bring
+          your ideas to life.
         </p>
 
-        <div className="grid gap-8 md:grid-cols-2">
+        <div className="grid gap-8 md:grid-cols-3">
 
-          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8">
+          {/* Email */}
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition hover:border-cyan-400">
 
             <Mail
               size={40}
@@ -45,14 +50,16 @@ export default function Contact() {
 
             <a
               href="mailto:godswillmamus54@gmail.com"
-              className="text-gray-300 hover:text-cyan-400"
+              className="text-gray-300 transition hover:text-cyan-400"
             >
               godswillmamus54@gmail.com
             </a>
 
           </div>
 
-          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8">
+          {/* Location */}
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition hover:border-cyan-400">
 
             <MapPin
               size={40}
@@ -69,7 +76,46 @@ export default function Contact() {
 
           </div>
 
+          {/* Portfolio */}
+
+          <div className="rounded-2xl border border-slate-800 bg-slate-900 p-8 transition hover:border-cyan-400">
+
+            <Globe
+              size={40}
+              className="mx-auto mb-4 text-cyan-400"
+            />
+
+            <h3 className="mb-2 text-xl font-semibold">
+              Portfolio
+            </h3>
+
+            <a
+              href="https://godswill-portfolio-sigma.vercel.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-300 transition hover:text-cyan-400"
+            >
+              View Portfolio
+            </a>
+
+          </div>
+
         </div>
+
+        {/* CTA */}
+
+        <div className="mt-16">
+
+          <a
+            href="mailto:godswillmamus54@gmail.com"
+            className="inline-block rounded-xl bg-cyan-500 px-10 py-4 font-bold text-black shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1 hover:bg-cyan-400"
+          >
+            Let's Build Something Great
+          </a>
+
+        </div>
+
+        {/* Social Links */}
 
         <div className="mt-14 flex justify-center gap-8 text-4xl">
 
@@ -77,7 +123,7 @@ export default function Contact() {
             href="https://github.com/godswillmamus54-max"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-cyan-400"
+            className="transition hover:scale-110 hover:text-cyan-400"
           >
             <FaGithub />
           </a>
@@ -86,7 +132,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/ogheneochuko-godswill/"
             target="_blank"
             rel="noopener noreferrer"
-            className="transition hover:text-cyan-400"
+            className="transition hover:scale-110 hover:text-cyan-400"
           >
             <FaLinkedin />
           </a>

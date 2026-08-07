@@ -12,11 +12,13 @@ import { Mail } from "lucide-react";
 
 export default function Hero() {
   return (
-    <section className="relative flex min-h-screen items-center overflow-hidden bg-gradient-to-br from-slate-950 via-slate-900 to-black px-8 pt-36 text-white">
-
+    <section
+      className="relative flex min-h-screen items-center overflow-hidden bg-black px-8 py-24 text-white"
+    >
       {/* Background Glow */}
-      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-[150px]" />
-      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-600/20 blur-[150px]" />
+
+      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-cyan-500/20 blur-[160px]" />
+      <div className="absolute right-0 bottom-0 h-96 w-96 rounded-full bg-blue-600/20 blur-[160px]" />
 
       <motion.div
         initial={{ opacity: 0, y: 80 }}
@@ -24,8 +26,8 @@ export default function Hero() {
         transition={{ duration: 1 }}
         className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-between gap-20 lg:flex-row"
       >
-
         {/* LEFT */}
+
         <div className="flex-1 text-center lg:text-left">
 
           <p className="mb-4 text-lg font-semibold text-cyan-400">
@@ -34,18 +36,18 @@ export default function Hero() {
 
           <h1 className="text-6xl font-extrabold leading-tight tracking-tight md:text-7xl">
             Ogheneochuko
-            <span className="block text-cyan-400">
+            <span className="block bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent">
               Godswill
             </span>
           </h1>
 
-          {/* Availability Badge */}
+          {/* Availability */}
 
           <div className="mt-6 inline-flex items-center rounded-full border border-cyan-500/40 bg-cyan-500/10 px-5 py-2 text-sm font-medium text-cyan-300">
-            🟢 Available for Onsite • Hybrid • Remote
+            🟢 Available for Onsite • Hybrid • Remote Opportunities
           </div>
 
-          {/* Animated Title */}
+          {/* Animated Roles */}
 
           <div className="mt-8 text-3xl font-bold text-gray-200">
 
@@ -62,8 +64,7 @@ export default function Hero() {
                 "AI Agent Builder",
                 2000,
               ]}
-              wrapper="span"
-              speed={40}
+              speed={45}
               repeat={Infinity}
             />
 
@@ -72,13 +73,20 @@ export default function Hero() {
           {/* Description */}
 
           <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-400">
-            I design and deploy production-ready AI automation, cloud
-            infrastructure, and intelligent workflow systems using
+            I help businesses automate operations, deploy scalable cloud
+            infrastructure, and build intelligent AI workflow systems using
             <span className="text-cyan-400"> n8n</span>,
             <span className="text-cyan-400"> Docker</span>,
-            <span className="text-cyan-400"> AWS</span>, APIs, and modern AI
-            technologies to help businesses automate repetitive work and scale
-            efficiently.
+            <span className="text-cyan-400"> AWS</span>,
+            <span className="text-cyan-400"> Next.js</span>, and modern AI
+            technologies.
+
+            <br />
+            <br />
+
+            Passionate about transforming repetitive business processes into
+            reliable, production-ready automation solutions that improve
+            efficiency and accelerate growth.
           </p>
 
           {/* Buttons */}
@@ -108,6 +116,27 @@ export default function Hero() {
 
           </div>
 
+          {/* Stats */}
+
+          <div className="mt-12 flex flex-wrap justify-center gap-10 lg:justify-start">
+
+            <div>
+              <h3 className="text-3xl font-bold text-cyan-400">5+</h3>
+              <p className="text-gray-400">Major Projects</p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-cyan-400">15+</h3>
+              <p className="text-gray-400">Technologies</p>
+            </div>
+
+            <div>
+              <h3 className="text-3xl font-bold text-cyan-400">100%</h3>
+              <p className="text-gray-400">Production Ready</p>
+            </div>
+
+          </div>
+
           {/* Social Icons */}
 
           <div className="mt-12 flex justify-center gap-8 text-3xl text-gray-400 lg:justify-start">
@@ -116,8 +145,7 @@ export default function Hero() {
               href="https://github.com/godswillmamus54-max"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition hover:scale-110 hover:text-cyan-400"
-              title="GitHub"
+              className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <FaGithub />
             </a>
@@ -126,16 +154,14 @@ export default function Hero() {
               href="https://www.linkedin.com/in/ogheneochuko-godswill/"
               target="_blank"
               rel="noopener noreferrer"
-              className="transition hover:scale-110 hover:text-cyan-400"
-              title="LinkedIn"
+              className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <FaLinkedin />
             </a>
 
             <a
               href="mailto:godswillmamus54@gmail.com"
-              className="transition hover:scale-110 hover:text-cyan-400"
-              title="Email"
+              className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <Mail />
             </a>
@@ -148,15 +174,19 @@ export default function Hero() {
 
         <div className="relative flex flex-1 justify-center">
 
-          <div className="absolute h-[430px] w-[430px] rounded-full bg-cyan-500/30 blur-[100px]" />
+          <div className="absolute h-[430px] w-[430px] rounded-full bg-cyan-500/30 blur-[110px]" />
 
           <motion.div
-            whileHover={{
-              scale: 1.04,
-              rotate: 1,
+            animate={{
+              y: [0, -10, 0],
             }}
             transition={{
-              duration: .3,
+              duration: 4,
+              repeat: Infinity,
+            }}
+            whileHover={{
+              scale: 1.05,
+              rotate: 1,
             }}
           >
 
@@ -166,7 +196,7 @@ export default function Hero() {
               width={420}
               height={420}
               priority
-              className="rounded-full border-4 border-cyan-400 object-cover shadow-[0_0_60px_rgba(34,211,238,.45)]"
+              className="rounded-full border-4 border-cyan-400 object-cover shadow-[0_0_70px_rgba(34,211,238,.45)]"
             />
 
           </motion.div>

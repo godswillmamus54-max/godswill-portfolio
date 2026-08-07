@@ -8,46 +8,102 @@ const projects = [
   {
     title: "Production n8n Server",
     description:
-      "Production-ready n8n deployment on AWS using Docker Compose, Nginx, HTTPS, automated backups, Cloudflare and a custom domain.",
+      "Enterprise-ready workflow automation platform deployed on AWS using Docker, Nginx, HTTPS, Cloudflare, automated backups and monitoring. Built for reliable production automation.",
+
     image: "/images/n8n-dashboard.png",
-    tech: ["AWS", "Docker", "Nginx", "Cloudflare", "n8n", "Ubuntu"],
+
+    tech: [
+      "AWS",
+      "Docker",
+      "Ubuntu",
+      "Nginx",
+      "Cloudflare",
+      "n8n",
+    ],
+
     github:
       "https://github.com/godswillmamus54-max/godswillai-n8n-production",
+
     demo: "https://godswillai.dev",
+
+    status: "Production",
   },
+
   {
     title: "AI Content Factory",
+
     description:
-      "AI workflow system that generates social media content, images and automates publishing using n8n and OpenAI.",
+      "End-to-end AI automation system that generates articles, social media content, AI images and publishing workflows using OpenAI and n8n.",
+
     image: "/images/content-factory.png",
-    tech: ["n8n", "OpenAI", "Google Sheets", "Automation"],
+
+    tech: [
+      "n8n",
+      "OpenAI",
+      "Google Sheets",
+      "Automation",
+    ],
+
     github:
       "https://github.com/godswillmamus54-max/AI-Content-Factory",
+
     demo: "#",
+
+    status: "Open Source",
   },
+
   {
     title: "AI Job Application Assistant",
+
     description:
-      "AI-powered workflow that analyzes job descriptions, generates tailored applications and automates job submissions.",
+      "Intelligent recruitment automation that analyzes job descriptions, generates tailored resumes and cover letters, and automates application workflows.",
+
     image: "/images/job-assistant.png",
-    tech: ["AI", "n8n", "OpenAI", "Automation"],
+
+    tech: [
+      "AI",
+      "OpenAI",
+      "n8n",
+      "Automation",
+    ],
+
     github: "#",
+
     demo: "#",
+
+    status: "In Progress",
   },
+
   {
     title: "Online Banking Demo",
+
     description:
-      "Modern online banking interface demonstrating secure authentication, dashboard design and responsive UI.",
+      "Modern digital banking interface demonstrating secure authentication, responsive dashboards, transaction history and clean financial UI/UX.",
+
     image: "/images/banking-ui.png",
-    tech: ["Next.js", "React", "TypeScript", "Tailwind CSS"],
+
+    tech: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+
     github: "#",
+
     demo: "#",
+
+    status: "Demo",
   },
+
   {
     title: "Personal Portfolio Website",
+
     description:
-      "Modern responsive portfolio showcasing AI automation projects, DevOps skills, cloud engineering experience and professional branding.",
+      "Professional developer portfolio built with Next.js showcasing AI Automation, DevOps, Cloud Engineering, GitHub projects and production deployments.",
+
     image: "/images/portfolio.png",
+
     tech: [
       "Next.js",
       "React",
@@ -55,9 +111,14 @@ const projects = [
       "Framer Motion",
       "TypeScript",
     ],
+
     github:
       "https://github.com/godswillmamus54-max/godswill-portfolio",
-    demo: "https://godswill-portfolio-sigma.vercel.app/"
+
+    demo:
+      "https://godswill-portfolio-sigma.vercel.app/",
+
+    status: "Live",
   },
 ];
 
@@ -68,6 +129,7 @@ export default function Projects() {
       className="bg-black px-8 py-32 text-white"
     >
       <div className="mx-auto max-w-7xl">
+
         <motion.h2
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -79,7 +141,9 @@ export default function Projects() {
         </motion.h2>
 
         <div className="grid gap-10 lg:grid-cols-2">
+
           {projects.map((project, index) => (
+
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 40 }}
@@ -89,18 +153,27 @@ export default function Projects() {
                 duration: 0.6,
                 delay: index * 0.15,
               }}
+              whileHover={{ y: -6 }}
               className="overflow-hidden rounded-2xl border border-slate-800 bg-slate-900 transition hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/10"
             >
-              <div className="relative h-56 w-full">
+
+              <div className="relative h-60 overflow-hidden">
+
                 <Image
                   src={project.image}
                   alt={project.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition duration-500 hover:scale-105"
                 />
+
+                <div className="absolute right-4 top-4 rounded-full bg-cyan-500 px-3 py-1 text-xs font-semibold text-black">
+                  {project.status}
+                </div>
+
               </div>
 
               <div className="p-8">
+
                 <h3 className="text-3xl font-bold">
                   {project.title}
                 </h3>
@@ -110,45 +183,60 @@ export default function Projects() {
                 </p>
 
                 <div className="mt-6 flex flex-wrap gap-3">
+
                   {project.tech.map((tech) => (
+
                     <span
                       key={tech}
                       className="rounded-full bg-cyan-500/10 px-4 py-2 text-sm text-cyan-300"
                     >
                       {tech}
                     </span>
+
                   ))}
+
                 </div>
 
                 <div className="mt-8 flex gap-6">
+
                   {project.github !== "#" && (
+
                     <a
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+                      className="flex items-center gap-2 text-cyan-400 transition hover:text-cyan-300"
                     >
                       <FaGithub />
-                      GitHub
+                      Source Code
                     </a>
+
                   )}
 
                   {project.demo !== "#" && (
+
                     <a
                       href={project.demo}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="flex items-center gap-2 text-cyan-400 hover:text-cyan-300"
+                      className="flex items-center gap-2 text-cyan-400 transition hover:text-cyan-300"
                     >
                       <FaExternalLinkAlt />
                       Live Demo
                     </a>
+
                   )}
+
                 </div>
+
               </div>
+
             </motion.div>
+
           ))}
+
         </div>
+
       </div>
     </section>
   );
