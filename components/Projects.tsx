@@ -57,7 +57,7 @@ const projects = [
     ],
     github:
       "https://github.com/godswillmamus54-max/godswill-portfolio",
-    demo: "#",
+    demo: "https://godswill-portfolio-sigma.vercel.app/"
   },
 ];
 
