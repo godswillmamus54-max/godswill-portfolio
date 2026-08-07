@@ -12,7 +12,7 @@ Professional portfolio showcasing AI Automation, DevOps, Cloud Engineering, and 
 
 Download my latest resume here:
 
-👉 [Resume (PDF)](docs/resume.pdf)
+👉 [Resume (PDF)](resume.pdf)
 
 > If you decide to store it in an `assets` or `docs` folder instead, update the link accordingly, e.g. `assets/resume.pdf`.
 
