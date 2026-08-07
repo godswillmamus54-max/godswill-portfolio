@@ -14,7 +14,6 @@ Download my latest resume here:
 
 👉 [Resume (PDF)](resume.pdf)
 
-> If you decide to store it in an `assets` or `docs` folder instead, update the link accordingly, e.g. `assets/resume.pdf`.
 
 ---
 
