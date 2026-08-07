@@ -3,10 +3,7 @@
 import { motion } from "framer-motion";
 
 import {
-  SiN8N,
-  SiOpenai,
   SiDocker,
-  SiAmazonwebservices,
   SiLinux,
   SiCloudflare,
   SiJavascript,
@@ -32,23 +29,23 @@ const skillGroups = [
   {
     title: "AI & Automation",
     skills: [
-      { name: "n8n", icon: <SiN8N /> },
-      { name: "AI Agents", icon: <SiOpenai /> },
-      { name: "OpenAI API", icon: <SiOpenai /> },
+      { name: "n8n", icon: <FaCode /> },
+      { name: "AI Agents", icon: <FaCode /> },
+      { name: "OpenAI API", icon: <FaCode /> },
       { name: "Workflow Automation", icon: <FaCode /> },
       { name: "Prompt Engineering", icon: <FaCode /> },
-      { name: "Webhooks", icon: <FaTerminal /> },
+      { name: "Webhooks", icon: <FaCode /> },
     ],
   },
 
   {
     title: "Cloud & DevOps",
     skills: [
-      { name: "AWS", icon: <SiAmazonwebservices /> },
+      { name: "AWS", icon: <FaCode /> },
       { name: "Docker", icon: <SiDocker /> },
       { name: "Nginx", icon: <FaTerminal /> },
       { name: "Linux", icon: <SiLinux /> },
-      { name: "Ubuntu", icon: <SiLinux /> },
+      { name: "Ubuntu", icon: <FaTerminal /> },
       { name: "Cloudflare", icon: <SiCloudflare /> },
     ],
   },
@@ -91,7 +88,7 @@ export default function Skills() {
   return (
     <section
       id="skills"
-      className="bg-black px-8 py-32 text-white"
+      className="bg-slate-950 px-6 py-28 text-white"
     >
       <div className="mx-auto max-w-7xl">
 
