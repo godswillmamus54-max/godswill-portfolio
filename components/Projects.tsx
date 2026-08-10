@@ -67,11 +67,11 @@ const projects = [
       "Automation",
     ],
 
-    github: "#",
+    github: "https://github.com/godswillmamus54-max/AI-Job-Assistant",
 
     demo: "#",
 
-    status: "In Progress",
+    status: "Open Source",
   },
 
   {
