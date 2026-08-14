@@ -1,8 +1,68 @@
 "use client";
 
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 
+type GithubProfile = {
+  public_repos: number;
+  followers: number;
+  following: number;
+};
+
+const technologies = [
+  "n8n",
+  "OpenAI",
+  "JavaScript",
+  "Python",
+  "Node.js",
+  "REST APIs",
+  "Webhooks",
+  "Docker",
+  "AWS",
+  "Ubuntu",
+  "React",
+  "Next.js",
+  "GitHub",
+];
+
 export default function GithubStats() {
+  const [profile, setProfile] = useState<GithubProfile | null>(null);
+
+  useEffect(() => {
+    fetch("https://api.github.com/users/godswillmamus54-max")
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("Unable to load GitHub profile");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        setProfile({
+          public_repos: data.public_repos,
+          followers: data.followers,
+          following: data.following,
+        });
+      })
+      .catch(() => {
+        setProfile(null);
+      });
+  }, []);
+
+  const statistics = [
+    {
+      label: "Public Repositories",
+      value: profile ? profile.public_repos : "—",
+    },
+    {
+      label: "Followers",
+      value: profile ? profile.followers : "—",
+    },
+    {
+      label: "Following",
+      value: profile ? profile.following : "—",
+    },
+  ];
+
   return (
     <section
       id="github"
@@ -28,65 +88,89 @@ export default function GithubStats() {
 
         <div className="grid gap-10 lg:grid-cols-2">
 
-          {/* Stats */}
+          {/* GitHub Statistics */}
 
           <motion.div
             whileHover={{ y: -6 }}
             className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/10"
           >
-
-            <h3 className="mb-5 text-xl font-semibold text-cyan-400">
+            <h3 className="mb-8 text-xl font-semibold text-cyan-400">
               GitHub Statistics
             </h3>
 
-            <img
-              src="https://github-readme-stats-sigma-five.vercel.app/api?username=godswillmamus54-max&show_icons=true&theme=tokyonight&hide_border=true"
-              alt="GitHub Stats"
-              className="w-full rounded-xl transition duration-500 hover:scale-[1.02]"
-            />
+            <div className="grid grid-cols-3 gap-4">
+              {statistics.map((stat) => (
+                <div
+                  key={stat.label}
+                  className="rounded-xl bg-slate-800/70 p-5 text-center"
+                >
+                  <div className="text-3xl font-bold text-white">
+                    {stat.value}
+                  </div>
 
+                  <div className="mt-2 text-sm leading-5 text-gray-400">
+                    {stat.label}
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <a
+              href="https://github.com/godswillmamus54-max"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-8 inline-flex rounded-full border border-cyan-400 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-black"
+            >
+              View GitHub Profile
+            </a>
           </motion.div>
 
-          {/* Languages */}
+          {/* Technologies */}
 
           <motion.div
             whileHover={{ y: -6 }}
             className="rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/10"
           >
-
-            <h3 className="mb-5 text-xl font-semibold text-cyan-400">
-              Most Used Technologies
+            <h3 className="mb-8 text-xl font-semibold text-cyan-400">
+              Technologies
             </h3>
 
-            <img
-              src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=godswillmamus54-max&layout=compact&theme=tokyonight&hide_border=true"
-              alt="Top Languages"
-              className="w-full rounded-xl transition duration-500 hover:scale-[1.02]"
-            />
+            <div className="flex flex-wrap gap-3">
+              {technologies.map((technology) => (
+                <span
+                  key={technology}
+                  className="rounded-full border border-slate-600 px-4 py-2 text-sm text-gray-200 transition hover:border-cyan-400 hover:text-cyan-400"
+                >
+                  {technology}
+                </span>
+              ))}
+            </div>
 
+            <p className="mt-8 text-sm leading-6 text-gray-400">
+              Tools and technologies I use to build AI automation,
+              workflow systems, API integrations, cloud deployments,
+              and modern web applications.
+            </p>
           </motion.div>
 
-          {/* Streak */}
+          {/* Contribution Streak */}
 
           <motion.div
             whileHover={{ y: -6 }}
             className="lg:col-span-2 rounded-2xl border border-slate-800 bg-slate-900 p-6 transition hover:border-cyan-400 hover:shadow-xl hover:shadow-cyan-500/10"
           >
-
             <h3 className="mb-5 text-xl font-semibold text-cyan-400">
               Contribution Streak
             </h3>
 
             <img
               src="https://streak-stats.demolab.com?user=godswillmamus54-max&theme=tokyonight&hide_border=true"
-              alt="GitHub Streak"
+              alt="GitHub contribution streak"
               className="w-full rounded-xl transition duration-500 hover:scale-[1.02]"
             />
-
           </motion.div>
 
         </div>
-
       </div>
     </section>
   );
