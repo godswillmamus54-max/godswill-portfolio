@@ -90,7 +90,7 @@ export default function Contact() {
             </h3>
 
             <a
-              href="https://godswill-portfolio-sigma.vercel.app"
+              href="https://godswillai.dev"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-300 transition hover:text-cyan-400"
