@@ -24,13 +24,21 @@ export default function Contact() {
 
         <p className="mx-auto mb-16 max-w-3xl text-lg leading-8 text-gray-400">
           I'm currently available for onsite, hybrid, and remote opportunities
-          as an <span className="text-cyan-400">AI Automation Engineer</span>,
-          <span className="text-cyan-400"> DevOps Engineer</span>,
-          <span className="text-cyan-400"> Cloud Engineer</span>, or
-          <span className="text-cyan-400"> Workflow Automation Specialist</span>.
-          Whether you're looking to automate business processes, deploy cloud
-          infrastructure, or build AI-powered systems, I'd love to help bring
-          your ideas to life.
+          as an{" "}
+          <span className="text-cyan-400">
+            AI Automation Engineer
+          </span>
+          ,{" "}
+          <span className="text-cyan-400">
+            AI Agents Engineer
+          </span>
+          , or{" "}
+          <span className="text-cyan-400">
+            Workflow Automation Engineer
+          </span>
+          . I build AI agents, multi-agent workflows, business automations,
+          API integrations, and cloud infrastructure that solve practical
+          operational problems.
         </p>
 
         <div className="grid gap-8 md:grid-cols-3">
@@ -110,7 +118,7 @@ export default function Contact() {
             href="mailto:godswillmamus54@gmail.com"
             className="inline-block rounded-xl bg-cyan-500 px-10 py-4 font-bold text-black shadow-lg shadow-cyan-500/20 transition hover:-translate-y-1 hover:bg-cyan-400"
           >
-            Let's Build Something Great
+            Start a Conversation
           </a>
 
         </div>
@@ -123,6 +131,7 @@ export default function Contact() {
             href="https://github.com/godswillmamus54-max"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="GitHub"
             className="transition hover:scale-110 hover:text-cyan-400"
           >
             <FaGithub />
@@ -132,6 +141,7 @@ export default function Contact() {
             href="https://www.linkedin.com/in/ogheneochuko-godswill/"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="LinkedIn"
             className="transition hover:scale-110 hover:text-cyan-400"
           >
             <FaLinkedin />

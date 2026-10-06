@@ -6,6 +6,46 @@ import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
 
 const projects = [
   {
+    title: "Multi-Agent Workflow with LangGraph",
+    description:
+      "A stateful multi-agent workflow built with LangGraph using a Planner → Worker → Reviewer architecture. The system uses explicit shared state, conditional routing, structured reviewer decisions, feedback-driven revision, and bounded escalation after consecutive reviewer rejections.",
+    image: "/images/multi-agent-langgraph.png",
+    tech: [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "OpenAI",
+      "Multi-Agent Systems",
+      "StateGraph",
+      "Conditional Routing",
+    ],
+    github:
+      "https://github.com/godswillmamus54-max/agenticx-multi-agent-langgraph",
+    demo: "#",
+    status: "AI Agents",
+  },
+
+  {
+    title: "Tool-Using Research Agent",
+    description:
+      "A tool-using AI research agent built to answer research questions through external search and page-fetching tools. The system tracks evidence, produces source-grounded answers with citations, enforces hard execution limits, and handles tool failures gracefully.",
+    image: "/images/research-agent.png",
+    tech: [
+      "Python",
+      "LangGraph",
+      "LangChain",
+      "OpenAI",
+      "Tool Calling",
+      "Web Search",
+      "Source Traceability",
+    ],
+    github:
+      "https://github.com/godswillmamus54-max/agenticx-research-agent",
+    demo: "#",
+    status: "AI Agents",
+  },
+
+  {
     title: "RoofLead Rescue",
     description:
       "AI-powered lead recovery system for roofing businesses that analyzes stalled opportunities, applies deterministic scoring, generates personalized follow-up strategies, and produces recovery reports for sales teams.",
@@ -37,7 +77,8 @@ const projects = [
       "Slack",
       "Google Sheets",
     ],
-    github: "https://github.com/godswillmamus54-max/ai-support-triage-escalation-n8n",
+    github:
+      "https://github.com/godswillmamus54-max/ai-support-triage-escalation-n8n",
     demo: "#",
     status: "AI Automation",
   },
@@ -55,7 +96,8 @@ const projects = [
       "Google Sheets",
       "JavaScript",
     ],
-    github: "https://github.com/godswillmamus54-max/ai-lead-qualification-routing-system",
+    github:
+      "https://github.com/godswillmamus54-max/ai-lead-qualification-routing-system",
     demo: "#",
     status: "AI Automation",
   },
@@ -94,7 +136,7 @@ const projects = [
     github:
       "https://github.com/godswillmamus54-max/AI-Content-Factory",
     demo: "#",
-    status: "Open Source",
+    status: "AI Automation",
   },
 
   {
@@ -112,7 +154,7 @@ const projects = [
     github:
       "https://github.com/godswillmamus54-max/AI-Job-Assistant",
     demo: "#",
-    status: "Open Source",
+    status: "Automation",
   },
 
   {
@@ -131,7 +173,7 @@ const projects = [
     github:
       "https://github.com/godswillmamus54-max/godswillai-n8n-production",
     demo: "https://godswillai.dev",
-    status: "Production",
+    status: "Cloud & DevOps",
   },
 
   {
@@ -147,7 +189,7 @@ const projects = [
     ],
     github: "#",
     demo: "#",
-    status: "Demo",
+    status: "Web Development",
   },
 ];
 
@@ -177,9 +219,9 @@ export default function Projects() {
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            Production-focused AI automation, workflow engineering,
-            API integrations, business process automation, and cloud
-            infrastructure built for real-world use cases.
+            AI agents, multi-agent systems, business automation,
+            workflow engineering, API integrations, and cloud
+            infrastructure built around practical real-world use cases.
           </p>
         </motion.div>
 

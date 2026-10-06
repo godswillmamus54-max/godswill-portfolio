@@ -10,18 +10,21 @@ type GithubProfile = {
 };
 
 const technologies = [
-  "n8n",
+  "LangGraph",
+  "LangChain",
+  "AI Agents",
+  "Multi-Agent Systems",
+  "Model Context Protocol (MCP)",
   "OpenAI",
-  "JavaScript",
+  "n8n",
   "Python",
-  "Node.js",
+  "JavaScript",
+  "TypeScript",
   "REST APIs",
   "Webhooks",
   "Docker",
   "AWS",
   "Ubuntu",
-  "React",
-  "Next.js",
   "GitHub",
 ];
 
@@ -34,6 +37,7 @@ export default function GithubStats() {
         if (!response.ok) {
           throw new Error("Unable to load GitHub profile");
         }
+
         return response.json();
       })
       .then((data) => {
@@ -81,9 +85,10 @@ export default function GithubStats() {
         </motion.h2>
 
         <p className="mx-auto mb-16 max-w-3xl text-center text-lg leading-8 text-gray-400">
-          My GitHub showcases the projects, automation workflows,
-          cloud deployments, and continuous learning that reflect my
-          journey as an AI Automation and DevOps Engineer.
+          My GitHub showcases AI agents, multi-agent systems, automation
+          workflows, API integrations, cloud infrastructure, and practical
+          software projects that reflect how I build and solve real-world
+          problems.
         </p>
 
         <div className="grid gap-10 lg:grid-cols-2">
@@ -119,6 +124,7 @@ export default function GithubStats() {
               href="https://github.com/godswillmamus54-max"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="View GitHub Profile"
               className="mt-8 inline-flex rounded-full border border-cyan-400 px-6 py-3 font-semibold text-cyan-400 transition hover:bg-cyan-400 hover:text-black"
             >
               View GitHub Profile
@@ -147,9 +153,9 @@ export default function GithubStats() {
             </div>
 
             <p className="mt-8 text-sm leading-6 text-gray-400">
-              Tools and technologies I use to build AI automation,
-              workflow systems, API integrations, cloud deployments,
-              and modern web applications.
+              Tools and technologies I use to build AI agents, multi-agent
+              workflows, business automation, API integrations, cloud
+              infrastructure, and modern software systems.
             </p>
           </motion.div>
 

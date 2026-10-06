@@ -55,13 +55,15 @@ export default function Hero() {
               sequence={[
                 "AI Automation Engineer",
                 2000,
-                "DevOps Engineer",
+                "AI Agents Engineer",
                 2000,
-                "Cloud Engineer",
+                "Multi-Agent Systems Builder",
                 2000,
-                "n8n Workflow Expert",
+                "n8n Automation Engineer",
                 2000,
-                "AI Agent Builder",
+                "Workflow Automation Engineer",
+                2000,
+                "DevOps & Cloud Engineer",
                 2000,
               ]}
               speed={45}
@@ -73,20 +75,26 @@ export default function Hero() {
           {/* Description */}
 
           <p className="mt-8 max-w-2xl text-xl leading-9 text-gray-400">
-            I help businesses automate operations, deploy scalable cloud
-            infrastructure, and build intelligent AI workflow systems using
-            <span className="text-cyan-400"> n8n</span>,
-            <span className="text-cyan-400"> Docker</span>,
-            <span className="text-cyan-400"> AWS</span>,
-            <span className="text-cyan-400"> Next.js</span>, and modern AI
-            technologies.
+            I build{" "}
+            <span className="text-cyan-400">
+              AI agents, multi-agent workflows, and business automation systems
+            </span>{" "}
+            that turn complex and repetitive processes into reliable,
+            practical workflows.
 
             <br />
             <br />
 
-            Passionate about transforming repetitive business processes into
-            reliable, production-ready automation solutions that improve
-            efficiency and accelerate growth.
+            My work combines{" "}
+            <span className="text-cyan-400">LangGraph</span>,{" "}
+            <span className="text-cyan-400">LangChain</span>,{" "}
+            <span className="text-cyan-400">OpenAI</span>,{" "}
+            <span className="text-cyan-400">n8n</span>,{" "}
+            <span className="text-cyan-400">REST APIs</span>,{" "}
+            <span className="text-cyan-400">Docker</span>, and{" "}
+            <span className="text-cyan-400">AWS</span> to design systems
+            that reduce manual work, improve operations, and connect
+            intelligent AI capabilities with real business processes.
           </p>
 
           {/* Buttons */}
@@ -121,18 +129,30 @@ export default function Hero() {
           <div className="mt-12 flex flex-wrap justify-center gap-10 lg:justify-start">
 
             <div>
-              <h3 className="text-3xl font-bold text-cyan-400">5+</h3>
-              <p className="text-gray-400">Major Projects</p>
+              <h3 className="text-3xl font-bold text-cyan-400">
+                10+
+              </h3>
+              <p className="text-gray-400">
+                Featured Projects
+              </p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-cyan-400">15+</h3>
-              <p className="text-gray-400">Technologies</p>
+              <h3 className="text-3xl font-bold text-cyan-400">
+                AI
+              </h3>
+              <p className="text-gray-400">
+                Agents & Automation
+              </p>
             </div>
 
             <div>
-              <h3 className="text-3xl font-bold text-cyan-400">100%</h3>
-              <p className="text-gray-400">Production Ready</p>
+              <h3 className="text-3xl font-bold text-cyan-400">
+                20+
+              </h3>
+              <p className="text-gray-400">
+                Technologies
+              </p>
             </div>
 
           </div>
@@ -145,6 +165,7 @@ export default function Hero() {
               href="https://github.com/godswillmamus54-max"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="GitHub"
               className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <FaGithub />
@@ -154,6 +175,7 @@ export default function Hero() {
               href="https://www.linkedin.com/in/ogheneochuko-godswill/"
               target="_blank"
               rel="noopener noreferrer"
+              aria-label="LinkedIn"
               className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <FaLinkedin />
@@ -161,6 +183,7 @@ export default function Hero() {
 
             <a
               href="mailto:godswillmamus54@gmail.com"
+              aria-label="Email"
               className="transition duration-300 hover:scale-110 hover:text-cyan-400"
             >
               <Mail />

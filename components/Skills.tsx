@@ -23,15 +23,23 @@ import {
   FaGitAlt,
   FaTerminal,
   FaCode,
+  FaRobot,
+  FaNetworkWired,
+  FaProjectDiagram,
 } from "react-icons/fa";
 
 const skillGroups = [
   {
-    title: "AI & Automation",
+    title: "AI Agents & Automation",
     skills: [
+      { name: "AI Agents", icon: <FaRobot /> },
+      { name: "LangGraph", icon: <FaProjectDiagram /> },
+      { name: "LangChain", icon: <FaNetworkWired /> },
+      { name: "Multi-Agent Systems", icon: <FaProjectDiagram /> },
+      { name: "OpenAI API", icon: <FaRobot /> },
+      { name: "Tool Calling", icon: <FaCode /> },
+      { name: "Model Context Protocol (MCP)", icon: <FaNetworkWired /> },
       { name: "n8n", icon: <FaCode /> },
-      { name: "AI Agents", icon: <FaCode /> },
-      { name: "OpenAI API", icon: <FaCode /> },
       { name: "Workflow Automation", icon: <FaCode /> },
       { name: "Prompt Engineering", icon: <FaCode /> },
       { name: "Webhooks", icon: <FaCode /> },
@@ -53,9 +61,9 @@ const skillGroups = [
   {
     title: "Programming",
     skills: [
+      { name: "Python", icon: <SiPython /> },
       { name: "JavaScript", icon: <SiJavascript /> },
       { name: "TypeScript", icon: <SiTypescript /> },
-      { name: "Python", icon: <SiPython /> },
       { name: "Node.js", icon: <SiNodedotjs /> },
       { name: "React", icon: <SiReact /> },
       { name: "Next.js", icon: <SiNextdotjs /> },
@@ -63,12 +71,16 @@ const skillGroups = [
   },
 
   {
-    title: "Databases",
+    title: "APIs, Data & Integrations",
     skills: [
-      { name: "SQLite", icon: <SiSqlite /> },
+      { name: "REST APIs", icon: <FaNetworkWired /> },
+      { name: "Google Sheets", icon: <FaCode /> },
       { name: "PostgreSQL", icon: <SiPostgresql /> },
       { name: "MySQL", icon: <SiMysql /> },
-      { name: "Google Sheets", icon: <FaCode /> },
+      { name: "SQLite", icon: <SiSqlite /> },
+      { name: "Slack", icon: <FaCode /> },
+      { name: "Gmail", icon: <FaCode /> },
+      { name: "Google Drive", icon: <FaCode /> },
     ],
   },
 

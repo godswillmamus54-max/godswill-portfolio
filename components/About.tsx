@@ -38,7 +38,7 @@ export default function About() {
           >
 
             <h3 className="mb-8 text-3xl font-bold leading-tight">
-              Building Intelligent Automation That Solves Real Business Problems
+              Building AI Agents and Automation Systems That Solve Real Business Problems
             </h3>
 
             <p className="mb-6 leading-8 text-gray-300">
@@ -46,31 +46,37 @@ export default function About() {
               <span className="font-semibold text-cyan-400">
                 Ogheneochuko Godswill
               </span>
-              , an AI Automation Engineer passionate about designing
-              intelligent workflow systems, scalable cloud infrastructure,
-              and production-ready business automation.
+              , an AI Automation Engineer focused on building intelligent
+              agents, multi-agent workflows, and business automation systems
+              that turn complex processes into reliable, practical workflows.
             </p>
 
             <p className="mb-6 leading-8 text-gray-300">
-              My expertise includes AI workflow automation with n8n,
-              Docker-based deployments, AWS cloud infrastructure,
-              REST API integrations, DevOps practices, and modern web
-              development using Next.js and React.
+              My work spans{" "}
+              <span className="text-cyan-400">LangGraph</span>,{" "}
+              <span className="text-cyan-400">LangChain</span>,{" "}
+              <span className="text-cyan-400">OpenAI</span>,{" "}
+              <span className="text-cyan-400">n8n</span>, Python, REST APIs,
+              webhooks, structured data, and tool-based AI workflows. I've
+              built systems for research, lead recovery, customer support,
+              sales qualification, client onboarding, and content operations.
             </p>
 
             <p className="mb-6 leading-8 text-gray-300">
-              I enjoy transforming repetitive manual processes into
-              intelligent automation that saves time, reduces operational
-              costs, and improves business efficiency through AI-driven
-              solutions.
+              I also work across{" "}
+              <span className="text-cyan-400">Docker</span>,{" "}
+              <span className="text-cyan-400">AWS</span>, Ubuntu Linux,
+              Nginx, Cloudflare, Git, and modern web technologies. This
+              allows me to connect intelligent AI capabilities with the
+              infrastructure and integrations required to run useful
+              automation systems.
             </p>
 
             <p className="leading-8 text-gray-300">
-              Every project I build focuses on reliability,
-              scalability, maintainability, and delivering measurable
-              value. I'm continuously expanding my knowledge in Cloud,
-              DevOps, Artificial Intelligence, and Software Engineering
-              to stay at the forefront of modern technology.
+              My approach is practical and engineering-focused: define clear
+              system states, validate inputs, use structured outputs, control
+              agent execution, handle failures, test important paths, and
+              design workflows that can be maintained and improved over time.
             </p>
 
           </motion.div>
@@ -84,6 +90,34 @@ export default function About() {
             transition={{ duration: 0.8 }}
             className="grid grid-cols-2 gap-6"
           >
+
+            <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+
+              <FaRobot className="mx-auto mb-4 text-5xl text-cyan-400" />
+
+              <h3 className="text-2xl font-bold">
+                AI Agents
+              </h3>
+
+              <p className="mt-3 text-gray-400">
+                Tool-Using & Intelligent Workflows
+              </p>
+
+            </div>
+
+            <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
+
+              <FaRobot className="mx-auto mb-4 text-5xl text-cyan-400" />
+
+              <h3 className="text-2xl font-bold">
+                Multi-Agent
+              </h3>
+
+              <p className="mt-3 text-gray-400">
+                LangGraph & Stateful Systems
+              </p>
+
+            </div>
 
             <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
@@ -101,20 +135,6 @@ export default function About() {
 
             <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
 
-              <FaRobot className="mx-auto mb-4 text-5xl text-cyan-400" />
-
-              <h3 className="text-2xl font-bold">
-                AI
-              </h3>
-
-              <p className="mt-3 text-gray-400">
-                Automation & Intelligent Agents
-              </p>
-
-            </div>
-
-            <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
-
               <FaAws className="mx-auto mb-4 text-5xl text-cyan-400" />
 
               <h3 className="text-2xl font-bold">
@@ -122,21 +142,7 @@ export default function About() {
               </h3>
 
               <p className="mt-3 text-gray-400">
-                Production Cloud Deployment
-              </p>
-
-            </div>
-
-            <div className="rounded-2xl border border-slate-700 bg-slate-900 p-8 text-center transition duration-300 hover:-translate-y-2 hover:border-cyan-400 hover:shadow-lg hover:shadow-cyan-500/20">
-
-              <FaGraduationCap className="mx-auto mb-4 text-5xl text-cyan-400" />
-
-              <h3 className="text-2xl font-bold">
-                Lifelong Learning
-              </h3>
-
-              <p className="mt-3 text-gray-400">
-                Continuous Growth & Innovation
+                Cloud & Production Infrastructure
               </p>
 
             </div>

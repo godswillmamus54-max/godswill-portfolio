@@ -2,68 +2,86 @@
 
 const services = [
   {
-    title: "n8n Workflow Automation",
+    title: "AI Agents & Agentic Workflows",
     description:
-      "Design, build, debug, and optimize reliable n8n workflows that eliminate repetitive business processes.",
+      "Build AI agents that process information, use tools, follow structured workflows, and automate business actions with controlled execution.",
   },
   {
-    title: "AI Agents & OpenAI",
+    title: "Multi-Agent Systems",
     description:
-      "Build AI-powered workflows and agents that process information, use tools, and automate business actions.",
+      "Design multi-agent workflows with specialized roles, shared state, conditional routing, reviewer feedback, bounded retries, and escalation paths.",
+  },
+  {
+    title: "n8n Workflow Automation",
+    description:
+      "Design, build, debug, and optimize reliable n8n workflows that eliminate repetitive business processes and connect business tools.",
   },
   {
     title: "API & Webhook Integration",
     description:
-      "Connect business applications, APIs, webhooks, databases, and AI services into reliable automated systems.",
+      "Connect business applications, REST APIs, webhooks, databases, and AI services into reliable automated systems.",
   },
   {
     title: "Business Process Automation",
     description:
-      "Turn repetitive tasks such as lead handling, reporting, notifications, and data processing into automated workflows.",
-  },
-  {
-    title: "AI Content Automation",
-    description:
-      "Build automated pipelines for AI-generated text, images, video, and content publishing.",
+      "Turn repetitive tasks such as lead handling, customer support, onboarding, reporting, notifications, and data processing into automated workflows.",
   },
   {
     title: "Workflow Debugging & Optimization",
     description:
-      "Diagnose broken workflows, API failures, data-flow issues, mapping problems, and unreliable automation.",
+      "Diagnose broken workflows, API failures, data-flow issues, mapping problems, and unreliable automation to improve system reliability.",
   },
 ];
 
 const technologies = [
-  "n8n",
+  "LangGraph",
+  "LangChain",
+  "AI Agents",
+  "Multi-Agent Systems",
+  "Model Context Protocol (MCP)",
   "OpenAI",
+  "n8n",
   "Python",
   "JavaScript",
-  "Node.js",
+  "TypeScript",
   "REST APIs",
   "Webhooks",
   "Docker",
   "AWS",
   "Ubuntu",
-  "React",
-  "Next.js",
   "GitHub",
 ];
 
 const projects = [
   {
-    title: "AI Job Application Assistant",
+    title: "Multi-Agent Workflow with LangGraph",
     description:
-      "Automated job discovery, AI job analysis, tailored resume and cover-letter generation, application tracking, and email notifications.",
+      "Stateful multi-agent workflow using Planner, Worker, and Reviewer roles with explicit shared state, conditional routing, structured review decisions, bounded retries, and escalation.",
   },
   {
-    title: "AI Content Factory",
+    title: "Tool-Using Research Agent",
     description:
-      "AI-powered content production and publishing using n8n, OpenAI, Docker, APIs, and automated image and video generation.",
+      "AI research agent that uses external search and page-fetching tools, tracks evidence, produces source-grounded answers, enforces execution limits, and handles tool failures.",
   },
   {
-    title: "AI Daily Briefing Assistant",
+    title: "RoofLead Rescue",
     description:
-      "Scheduled AI reporting workflow combining multiple APIs, AI processing, Google Sheets, and automated notifications.",
+      "AI-powered lead recovery system that analyzes stalled opportunities, applies deterministic scoring, generates personalized follow-up strategies, and produces recovery reports for sales teams.",
+  },
+  {
+    title: "AI Customer Support Triage & Escalation",
+    description:
+      "AI support automation that validates and deduplicates requests, analyzes category, priority and sentiment, routes tickets by urgency, and escalates critical cases.",
+  },
+  {
+    title: "AI Lead Qualification & Routing",
+    description:
+      "AI-powered sales automation that captures and validates leads, detects duplicates, scores buying intent, classifies opportunities, alerts sales teams, and stores qualification data.",
+  },
+  {
+    title: "AI Client Onboarding & Project Setup",
+    description:
+      "End-to-end onboarding automation that validates client requests, assesses project requirements, creates project records and tasks, organizes data, and sends notifications.",
   },
 ];
 
@@ -74,6 +92,7 @@ export default function HireMe() {
       className="bg-[#050505] px-6 py-24 text-white md:px-8 md:py-32"
     >
       <div className="mx-auto max-w-7xl">
+
         {/* Header */}
         <div className="mx-auto max-w-4xl text-center">
           <p className="mb-3 text-sm font-semibold uppercase tracking-[0.25em] text-cyan-400">
@@ -81,19 +100,19 @@ export default function HireMe() {
           </p>
 
           <h2 className="text-4xl font-bold md:text-5xl">
-            AI Automation Engineer
+            AI Automation &amp; AI Agents Engineer
           </h2>
 
           <p className="mx-auto mt-6 max-w-3xl text-lg leading-8 text-gray-400">
-            I build AI-powered business automations that eliminate repetitive
-            work, connect your tools, and turn manual processes into reliable
-            workflows.
+            I build AI agents, multi-agent workflows, and business automations
+            that eliminate repetitive work, connect your tools, and turn manual
+            processes into reliable systems.
           </p>
 
           <p className="mx-auto mt-4 max-w-2xl text-sm leading-6 text-gray-500">
-            From workflow design and AI agents to API integrations and
-            automation debugging, I help turn manual processes into systems
-            that work for you.
+            From agent orchestration and workflow automation to API
+            integrations and production infrastructure, I build practical
+            systems designed around real business processes.
           </p>
         </div>
 
@@ -123,15 +142,16 @@ export default function HireMe() {
             </p>
 
             <h3 className="mt-2 text-3xl font-bold">
-              Real Automation Projects
+              AI Agents &amp; Automation Systems
             </h3>
 
             <p className="mx-auto mt-4 max-w-2xl text-gray-400">
-              Examples of AI and automation systems I have designed and built.
+              Practical AI and automation systems designed and built around
+              real-world workflows, business processes, and agentic use cases.
             </p>
           </div>
 
-          <div className="mt-8 grid gap-6 md:grid-cols-3">
+          <div className="mt-8 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {projects.map((project) => (
               <div
                 key={project.title}
@@ -182,8 +202,9 @@ export default function HireMe() {
           </h3>
 
           <p className="mx-auto mt-4 max-w-2xl leading-7 text-gray-400">
-            I build reliable AI workflows, API integrations, and automation
-            systems that reduce manual work and improve business operations.
+            I build reliable AI agents, multi-agent workflows, API
+            integrations, and business automation systems that reduce manual
+            work and improve operations.
           </p>
 
           <div className="mt-8 flex flex-col justify-center gap-4 sm:flex-row">
@@ -202,6 +223,7 @@ export default function HireMe() {
             </a>
           </div>
         </div>
+
       </div>
     </section>
   );
