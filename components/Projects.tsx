@@ -191,6 +191,62 @@ const projects = [
     demo: "#",
     status: "Web Development",
   },
+
+  {
+    title: "MT5 XAUUSD Automated Trading Agent",
+    description:
+      "A Python-based automated trading system for XAUUSD built around multi-timeframe market analysis, liquidity sweeps, break of structure, breaker blocks and retest execution. Includes a secured MetaTrader 5 bridge, demo-account safeguards, position management and configurable risk controls. Packaged and published; broker runtime validation is pending.",
+    image: "/images/mt5-trading-agent.png",
+    tech: [
+      "Python",
+      "MetaTrader 5",
+      "FastAPI",
+      "REST API",
+      "Algorithmic Trading",
+      "Risk Management",
+      "Automation",
+    ],
+    github: "#",
+    demo: "#",
+    status: "Packaged • Validation Pending",
+  },
+
+  {
+    title: "BillFlow – Business Invoicing Application",
+    description:
+      "A lightweight business invoicing and recurring invoice management application. Supports invoice creation, document management, payment tracking, recurring billing workflows and local data persistence.",
+    image: "/images/billflow.png",
+    tech: [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "Local Storage",
+      "Invoice Management",
+      "Recurring Billing",
+    ],
+    github: "https://github.com/godswillmamus54-max/BillFlow",
+    demo: "#",
+    status: "Completed",
+  },
+
+  {
+    title: "ZenovoMovers – Moving & Logistics Marketplace",
+    description:
+      "A Nigeria-focused moving and logistics marketplace designed to connect customers with moving service providers. The platform aims to streamline service discovery, moving requests and logistics coordination. Currently under active development.",
+    image: "/images/zenovo-movers.png",
+    tech: [
+      "Next.js",
+      "TypeScript",
+      "React",
+      "Web Development",
+      "Marketplace",
+      "Logistics",
+    ],
+    github: "#",
+    demo: "#",
+    status: "Ongoing Development",
+  },
+
 ];
 
 export default function Projects() {
