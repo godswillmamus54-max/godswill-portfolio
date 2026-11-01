@@ -362,6 +362,16 @@ export default function Projects() {
                         Live Demo
                       </a>
                     )}
+
+                    {project.title.includes("BillFlow") && (
+                      <a
+                        href="/projects/billflow"
+                        className="flex items-center gap-2 font-medium text-cyan-400 transition hover:text-cyan-300"
+                      >
+                        <FaExternalLinkAlt />
+                        Case Study
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
