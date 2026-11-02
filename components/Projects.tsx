@@ -337,7 +337,12 @@ export default function Projects() {
                 </div>
 
                 {/* Links */}
-                {(project.github !== "#" || project.demo !== "#") && (
+                {(
+                  project.github !== "#" ||
+                  project.demo !== "#" ||
+                  project.title.includes("BillFlow") ||
+                  project.title.includes("MT5 XAUUSD Automated Trading Agent")
+                ) && (
                   <div className="mt-8 flex flex-wrap gap-6">
                     {project.github !== "#" && (
                       <a
@@ -366,6 +371,16 @@ export default function Projects() {
                     {project.title.includes("BillFlow") && (
                       <a
                         href="/projects/billflow"
+                        className="flex items-center gap-2 font-medium text-cyan-400 transition hover:text-cyan-300"
+                      >
+                        <FaExternalLinkAlt />
+                        Case Study
+                      </a>
+                    )}
+
+                    {project.title.includes("MT5 XAUUSD Automated Trading Agent") && (
+                      <a
+                        href="/projects/mt5-trading-agent"
                         className="flex items-center gap-2 font-medium text-cyan-400 transition hover:text-cyan-300"
                       >
                         <FaExternalLinkAlt />
